@@ -46,9 +46,12 @@ const MainFilters = () => {
                         selected={option.selected}
                         sx={{
                            py: "4px",
+                           borderRadius: "10px",
                            "&.Mui-selected": {
                               background: "rgba(0, 0, 0, 0.04)",
-                              borderRadius: "10px"
+                              "& .MuiTypography-root": {
+                                 color: "#06082C"
+                              }
                            }
                         }}
                      >
@@ -64,7 +67,8 @@ const MainFilters = () => {
                                  fontWeight: 548,
                                  lineHeight: "20px",
                                  letterSpacing: "-0.5px",
-                                 fontVariationSettings: "'slnt' 0"
+                                 fontVariationSettings: "'slnt' 0",
+                                 color: "#7B7EA5"
                               }
                            }}
                         />

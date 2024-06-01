@@ -1,26 +1,38 @@
-import {Stack, Typography, Button, Container, FormLabel} from "@mui/material"
+import {Stack, Button, Container} from "@mui/material"
 import SLogoIcon from "../theme/icons/SLogoIcon"
-import MuiPhoneNumber from "material-ui-phone-number-2"
+import {
+   StyledContentline,
+   StyledFormLabel,
+   StyledHeadline,
+   StyledMuiPhoneNumber,
+   StyledNoAccountTypography
+} from "./StyledComponents"
 
 const CommonContent = () => (
    <Container>
       <Stack gap={4}>
-         <Stack width="100%" justifyContent="center" pt={2} alignItems="center">
-            <SLogoIcon />
+         <Stack gap={3}>
+            <Stack
+               width="100%"
+               justifyContent="center"
+               pt={2}
+               alignItems="center"
+            >
+               <SLogoIcon />
+            </Stack>
+            <Stack gap={2}>
+               <StyledHeadline>Вход на платформу</StyledHeadline>
+               <StyledContentline>
+                  Код будет автоматически отправлен на Ваш номер телефона с
+                  помощью SMS
+               </StyledContentline>
+            </Stack>
          </Stack>
-         <Stack gap={2}>
-            <Typography variant="h4" textAlign="center">
-               Вход на платформу
-            </Typography>
-            <Typography textAlign="center">
-               Код будет автоматически отправлен на Ваш номер телефона с помощью
-               SMS
-            </Typography>
-         </Stack>
+
          <Stack gap={3}>
             <Stack>
-               <FormLabel>Номер телефона</FormLabel>
-               <MuiPhoneNumber
+               <StyledFormLabel>Номер телефона</StyledFormLabel>
+               <StyledMuiPhoneNumber
                   defaultCountry="ru"
                   onlyCountries={["ru", "kz", "kg"]}
                   onChange={() => {}}
@@ -28,13 +40,9 @@ const CommonContent = () => (
                   variant="outlined"
                   disableAreaCodes
                   masks={{kg: "+... (...) ... ..."}}
-                  InputProps={{
-                     sx: {
-                        borderRadius: "10px"
-                     }
-                  }}
                />
             </Stack>
+
             <Button
                variant="contained"
                sx={{
@@ -48,8 +56,9 @@ const CommonContent = () => (
                Получить код
             </Button>
          </Stack>
+
          <Stack gap={2}>
-            <Typography textAlign="center">Нет аккаунта?</Typography>
+            <StyledNoAccountTypography>Нет аккаунта?</StyledNoAccountTypography>
             <Button
                variant="outlined"
                sx={{

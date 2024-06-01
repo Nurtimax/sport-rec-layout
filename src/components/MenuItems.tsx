@@ -21,7 +21,8 @@ const MenuItems = () => (
                         fontWeight: 548,
                         lineHeight: "20px",
                         letterSpacing: "-0.5px",
-                        fontVariationSettings: "'slnt' 0"
+                        fontVariationSettings: "'slnt' 0",
+                        color: page.id === 1 ? "#06082C" : "#9395B8"
                      }
                   }}
                />

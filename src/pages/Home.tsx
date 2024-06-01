@@ -5,11 +5,11 @@ import Banner from "../components/filters/Banner"
 
 const StyledCustomGrid = styled(Box)`
    display: grid;
-   grid-template-columns: 65.5% 31.5%;
+   grid-template-columns: 65.5% 32.5%;
    gap: 2%;
    /* Desktop */
    @media (min-width: 1200px) {
-      grid-template-columns: 65.5% 31.5%;
+      grid-template-columns: 65.5% 32.5%;
    }
 
    /* Tablet */

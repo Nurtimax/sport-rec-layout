@@ -1,19 +1,19 @@
 import {SvgIcon} from "@mui/material"
 
-const ArrowDownIcon = () => {
+const MenuIcon = () => {
    return (
-      <SvgIcon>
+      <SvgIcon sx={{width: 24, height: 24}}>
          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
          >
             <path
-               d="M5 7.5L10 12.5L15 7.5"
-               stroke="#9395B8"
-               strokeWidth="1.5"
+               d="M3 8.5H21M3 15.5H21"
+               stroke="#7B7EA5"
+               strokeWidth="2"
                strokeLinecap="round"
                strokeLinejoin="round"
             />
@@ -22,4 +22,4 @@ const ArrowDownIcon = () => {
    )
 }
 
-export default ArrowDownIcon
+export default MenuIcon

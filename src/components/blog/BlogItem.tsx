@@ -1,4 +1,5 @@
 import {
+   Box,
    Card,
    CardContent,
    CardHeader,
@@ -15,6 +16,10 @@ import ViewIcon from "../../theme/icons/ViewIcon"
 import {intlFormat} from "../../utils/constants/blog"
 import MessageSquareIcon from "../../theme/icons/MessageSquareIcon"
 import CommentList from "./CommentList"
+import {Swiper, SwiperSlide} from "swiper/react"
+import {HashNavigation, Pagination} from "swiper/modules"
+import "swiper/css"
+import "swiper/css/pagination"
 
 const StyledViewTypography = styled(Typography)`
    font-family: Inter;
@@ -77,20 +82,56 @@ const BlogItem: FC<IBlog> = ({
             }}
          />
 
-         <CardContent sx={{px: 3}}>
-            <Grid container spacing="10px">
-               {images.map(image => (
-                  <Grid item key={image} xs={4}>
-                     <CardMedia
-                        image={image}
-                        sx={{
-                           aspectRatio: "232 / 200",
-                           borderRadius: "14px"
-                        }}
-                     />
-                  </Grid>
-               ))}
-            </Grid>
+         <CardContent sx={{px: 3, width: "100%"}}>
+            <Box display={{sm: "block", xs: "none"}}>
+               <Grid container spacing="10px">
+                  {images.map(image => (
+                     <Grid item key={image} xs={4}>
+                        <CardMedia
+                           image={image}
+                           sx={{
+                              aspectRatio: "232 / 200",
+                              borderRadius: "14px"
+                           }}
+                        />
+                     </Grid>
+                  ))}
+               </Grid>
+            </Box>
+
+            <Box
+               display={{sm: "none", xs: "block"}}
+               sx={{
+                  ".swiper-slide": {
+                     width: "100% !important"
+                  }
+               }}
+            >
+               <Swiper
+                  className="mySwiper"
+                  hashNavigation={{
+                     watchState: true
+                  }}
+                  pagination={{
+                     clickable: true
+                  }}
+                  spaceBetween={10}
+                  modules={[HashNavigation, Pagination]}
+               >
+                  {images.map(image => (
+                     <SwiperSlide key={image} style={{width: "100%"}}>
+                        <CardMedia
+                           image={image}
+                           sx={{
+                              width: "100%",
+                              aspectRatio: "232 / 200",
+                              borderRadius: "14px"
+                           }}
+                        />
+                     </SwiperSlide>
+                  ))}
+               </Swiper>
+            </Box>
          </CardContent>
          <CardContent sx={{py: "1px", px: 3}}>
             <Stack direction="row" gap="25px" pb="17px">

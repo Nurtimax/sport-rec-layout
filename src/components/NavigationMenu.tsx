@@ -5,7 +5,6 @@ import {
    IconButton,
    Button
 } from "@mui/material"
-import MenuIcon from "@mui/icons-material/Menu"
 import {StyledHeaderPageTypography} from "./StyledComponents"
 import {FC} from "react"
 import {PAGES} from "../utils/constants/header"
@@ -13,6 +12,7 @@ import MenuItems from "./MenuItems"
 import ProfileSection from "./ProfileSection"
 import HeaderSection from "./HeaderSection"
 import MobileLanguageSelector from "./MobileLanguageSelector"
+import MenuIcon from "../theme/icons/MenuIcon"
 
 interface INavigationMenuProps {
    handleOpenNavMenu: () => void
@@ -81,7 +81,9 @@ const NavigationMenu: FC<INavigationMenuProps> = ({
                   }}
                >
                   {page.icon}
-                  <StyledHeaderPageTypography>
+                  <StyledHeaderPageTypography
+                     className={page.id === 1 ? "active" : ""}
+                  >
                      {page.name}
                   </StyledHeaderPageTypography>
                </Button>

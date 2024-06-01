@@ -1,7 +1,8 @@
 import React from "react"
-import {Dialog, Paper, Slide} from "@mui/material"
+import {Dialog, IconButton, Paper, Slide} from "@mui/material"
 import {TransitionProps} from "@mui/material/transitions"
 import CommonContent from "./CommonContent"
+import CloseIcon from "../theme/icons/CloseIcon"
 
 const Transition = React.forwardRef(function Transition(
    props: TransitionProps & {
@@ -24,7 +25,20 @@ const DialogContent: React.FC<DialogContentProps> = ({open, onClose}) => (
       keepMounted
       onClose={onClose}
       aria-describedby="alert-dialog-slide-description"
+      maxWidth="tn"
    >
+      <IconButton
+         aria-label="close"
+         onClick={onClose}
+         sx={{
+            position: "absolute",
+            right: 8,
+            top: 8,
+            color: theme => theme.palette.grey[500]
+         }}
+      >
+         <CloseIcon />
+      </IconButton>
       <Paper sx={{height: "100%", background: "#fff", py: 3}}>
          <CommonContent />
       </Paper>

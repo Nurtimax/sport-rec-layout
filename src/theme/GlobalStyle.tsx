@@ -19,7 +19,7 @@ export default function GlobalStyles({theme}: {theme: Theme}) {
             body: {
                width: "100%",
                height: "100%",
-               background: theme.palette.background.paper
+               background: theme.palette.background.default
             },
             "#root": {
                width: "100%",

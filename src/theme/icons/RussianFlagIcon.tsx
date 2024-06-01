@@ -10,7 +10,7 @@ const RussianFlagIcon = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
          >
-            <g clip-path="url(#clip0_588_7083)">
+            <g clipPath="url(#clip0_588_7083)">
                <path
                   d="M17.7778 0H2.22222C0.995 0 0 1.34325 0 3V6H20V3C20 1.34325 19.005 0 17.7778 0Z"
                   fill="#EEEEEE"

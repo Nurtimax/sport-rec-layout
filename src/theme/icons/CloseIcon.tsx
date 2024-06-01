@@ -1,8 +1,8 @@
 import {SvgIcon} from "@mui/material"
 
-const ArrowDownIcon = () => {
+const CloseIcon = () => {
    return (
-      <SvgIcon>
+      <SvgIcon sx={{width: 20, height: 20}}>
          <svg
             width="20"
             height="20"
@@ -11,7 +11,7 @@ const ArrowDownIcon = () => {
             xmlns="http://www.w3.org/2000/svg"
          >
             <path
-               d="M5 7.5L10 12.5L15 7.5"
+               d="M15 5L5 15M5 5L15 15"
                stroke="#9395B8"
                strokeWidth="1.5"
                strokeLinecap="round"
@@ -22,4 +22,4 @@ const ArrowDownIcon = () => {
    )
 }
 
-export default ArrowDownIcon
+export default CloseIcon

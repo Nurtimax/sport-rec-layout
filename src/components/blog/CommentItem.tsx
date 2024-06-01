@@ -51,8 +51,14 @@ const CommentItem: FC<IComment> = ({answer, comment, user, created}) => {
                      >
                         {comment}
                      </Typography>
-                     <Stack direction="row" gap="12px" pt="10px">
+                     <Stack
+                        component="span"
+                        direction="row"
+                        gap="12px"
+                        pt="10px"
+                     >
                         <Typography
+                           component="span"
                            sx={{
                               fontFamily: "Inter",
                               fontSize: "14px",
